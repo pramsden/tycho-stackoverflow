@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<units size='1'>
+  <unit id='rcp' version='1.0.0.202304210956' generation='2'>
+    <update id='rcp' range='[0.0.0,1.0.0.202304210956)' severity='0'/>
+    <properties size='5'>
+      <property name='org.eclipse.equinox.p2.name' value='Rcp'/>
+      <property name='maven-groupId' value='sandbox'/>
+      <property name='maven-artifactId' value='rcp'/>
+      <property name='maven-version' value='1.0.0-SNAPSHOT'/>
+      <property name='maven-type' value='eclipse-plugin'/>
+    </properties>
+    <provides size='4'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='rcp' version='1.0.0.202304210956'/>
+      <provided namespace='osgi.bundle' name='rcp' version='1.0.0.202304210956'/>
+      <provided namespace='osgi.identity' name='rcp' version='1.0.0.202304210956'>
+        <properties size='1'>
+          <property name='type' value='osgi.bundle'/>
+        </properties>
+      </provided>
+      <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+    </provides>
+    <requires size='6'>
+      <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.apache.felix.scr' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.equinox.event' range='0.0.0'/>
+      <required namespace='java.package' name='javax.inject' range='0.0.0'/>
+      <requiredProperties namespace='osgi.ee' match='(&amp;(osgi.ee=JavaSE)(version=11))'>
+        <description>
+          rcp
+        </description>
+      </requiredProperties>
+    </requires>
+    <artifacts size='1'>
+      <artifact classifier='osgi.bundle' id='rcp' version='1.0.0.202304210956'/>
+    </artifacts>
+    <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+    <touchpointData size='1'>
+      <instructions size='1'>
+        <instruction key='manifest'>
+          Bundle-SymbolicName: rcp;singleton:=true&#xA;Bundle-Version: 1.0.0.202304210956&#xA;
+        </instruction>
+      </instructions>
+    </touchpointData>
+  </unit>
+</units>
